@@ -20,8 +20,9 @@ pillow==10.4.0
 
 Установка
 
-Клонируйте репозиторий:git clone https://github.com/твой_юзернейм/webp-converter-backend.git
-cd webp-converter-backend
+Клонируйте репозиторий:git clone https://github.com/Faxriddinf05/convert.git
+cd convert
+
 
 
 Создайте и активируйте виртуальное окружение:python -m venv venv
@@ -32,7 +33,7 @@ venv\Scripts\activate  # Windows
 Установите зависимости:pip install -r requirements.txt
 
 
-Запустите API:uvicorn app:app --host 0.0.0.0 --port 8000
+Запустите API:uvicorn main:app --host 0.0.0.0 --port 8000
 
 
 
@@ -88,7 +89,7 @@ POST /resize-jpeg/Изменяет размер JPEG файлов до 1080x1440
 
 Тестирование
 
-Запустите API:uvicorn app:app --host 0.0.0.0 --port 8000
+Запустите API:uvicorn main:app --host 0.0.0.0 --port 8000
 
 
 Откройте http://localhost:8000/docs в браузере.
