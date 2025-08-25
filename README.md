@@ -33,7 +33,7 @@ venv\Scripts\activate  # Windows
 Установите зависимости:pip install -r requirements.txt
 
 
-Запустите API:uvicorn main:app --host 0.0.0.0 --port 8000
+Запустите API:uvicorn main4:app --host 0.0.0.0 --port 8000
 
 
 
