@@ -7,11 +7,23 @@ import zipfile
 import tempfile
 import shutil
 import os
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
     title="WebP to JPEG Converter API",
     description="API для конвертации WebP в JPEG и изменения размера JPEG. Поддерживает 5 операций: конвертация WebP, конвертация WebP из ZIP, конвертация WebP с изменением размера, конвертация WebP из ZIP с изменением размера, изменение размера JPEG."
 )
+
+
+# Добавление CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Разрешить запросы от любых источников (для разработки)
+    allow_credentials=True,
+    allow_methods=["*"],  # Разрешить все методы (GET, POST и т.д.)
+    allow_headers=["*"],  # Разрешить все заголовки
+)
+
 
 def resize_image(img: Image.Image, new_size: tuple) -> Image.Image:
     """Изменяет размер изображения, сохраняя пропорции."""
