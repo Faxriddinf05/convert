@@ -6,7 +6,6 @@ import io
 import zipfile
 import tempfile
 import shutil
-import os
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
